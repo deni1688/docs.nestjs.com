@@ -149,6 +149,7 @@ export interface PluginOptions {
   dtoKeyOfComment?: string;
   controllerKeyOfComment?: string;
   introspectComments?: boolean;
+  parameterProperties?: boolean;
 }
 ```
 
@@ -184,9 +185,14 @@ export interface PluginOptions {
     <td>The property key to set the comment text to on <code>ApiOperation</code>.</td>
   </tr>
   <tr>
-  <td><code>introspectComments</code></td>
+    <td><code>introspectComments</code></td>
     <td><code>false</code></td>
     <td>If set to true, plugin will generate descriptions and example values for properties based on comments</td>
+  </tr>
+  <tr>
+    <td><code>parameterProperties</code></td>
+    <td><code>false</code></td>
+    <td>If set to true, plugin will pick up properties in DTO classes declared with the typescript constructor shorthand</td>
   </tr>
 </table>
 
